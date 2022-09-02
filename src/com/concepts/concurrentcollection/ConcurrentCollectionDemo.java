@@ -10,8 +10,8 @@ public class ConcurrentCollectionDemo {
 	
 	public static void main(String[] args) {
 		
-		chm.put("101", "Kayal Kutti");
-		chm.put("102", "Ezhil");
+		chm.put("101", "One");
+		chm.put("102", "Two");
 		
 		Runnable r = () -> {
 				try {
@@ -20,7 +20,7 @@ public class ConcurrentCollectionDemo {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				chm.put("103", "Palanivel");
+				chm.put("103", "Three");
 		};
 		Thread t = new Thread(r);
 		t.start();
